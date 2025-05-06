@@ -6,3 +6,15 @@
 .font-mulish{
   font-family: "Mulish", sans-serif;
 }
+
+.banner-right > ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.bg-banner-gradient{
+  background-image: url("/images/bgbanner.png"), linear-gradient( #0a0b20, #26285c);
+  background-size: cover;
+  background-position: center;
+}

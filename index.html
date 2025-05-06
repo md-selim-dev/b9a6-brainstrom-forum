@@ -5,44 +5,257 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BrainsTrom Forum</title>
+  <!-- Daisy UI & Tailwind -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- fontawesome kit -->
+  <script src="https://kit.fontawesome.com/01137f08c2.js" crossorigin="anonymous"></script>
   <script src="scripts/scripts.js" defer></script>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body class="font-mulish">
   <!-- header section -->
-  <header class="container mx-auto">
+  <header class="container mx-auto my-8">
     <div class="navbar bg-base-100">
       <div class="flex-1">
-        <a class="btn btn-ghost text-2xl flex gap-0"><span class="text-red-500">B</span>rain<span class="text-blue-600">S</span>trom</a>
+        <a href="#" class="text-4xl bg-gradient-to-r font-black cursor-pointer text-shadow-lg flex gap-0">BrainsTrom</a>
       </div>
-      <div class="flex-none">
-        <ul class="menu menu-horizontal px-1">
-          <li><a>Link</a></li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul class="bg-base-100 rounded-t-none p-2">
-                <li><a>Link 1</a></li>
-                <li><a>Link 2</a></li>
-              </ul>
-            </details>
-          </li>
-        </ul>
+      <div class="flex gap-6">
+        <div class="tooltip" data-tip="Home">
+          <button class="btn rounded-full"><i class="fa-solid fa-house"></i></button>
+        </div>
+        <div class="tooltip" data-tip="Edit">
+          <button class="btn rounded-full"><i class="fa-solid fa-pen"></i></button>
+        </div>
+        <div class="tooltip" data-tip="Add">
+          <button class="btn rounded-full"><i class="fa-solid fa-user-plus"></i></button>
+        </div>
+        <div class="tooltip" data-tip="Shop">
+          <button class="btn rounded-full"><i class="fa-solid fa-flag"></i></button>
+        </div>
+        <div class="singin-btn ml-3">
+          <button class="btn bg-[#797DFC] text-white rounded-3xl w-28">Sign In</button>
+        </div>
       </div>
     </div>
-    </nav>
   </header>
 
   <!-- main section -->
   <main class="container mx-auto">
+    <!-- banner section  -->
+    <section class="flex justify-center my-8">
+      <div class="bg-banner-gradient w-[70%] h-[380px] p-8 rounded-3xl flex justify-around items-center">
+        <div class="banner-left flex flex-col gap-4 text-white">
+          <div>
+            <h class="text-5xl font-black leading-tight">Welcome to the <br> <span class="text-[#535ce2]">BrainsTrom</span> Forum</h1>
+          </div>
+          <div>
+            <p class="text-xl font-light">Share your favorite opinion and win and <br> wp forum coffee mug!</p>
+          </div>
+
+          <div class="bg-white p-1 flex rounded-full justify-around gap-2 px-4">
+            <input type="text" placeholder="Search here anything"
+              class="text-black bg-white font-normal text-[1rem] w-full max-w-xs required outline-none" />
+            <button class="btn bg-[#797DFC] w-28 text-white text-lg rounded-full">Search</button>
+          </div>
+
+        </div>
+        <div class="banner-right bg-slate-100 p-6 w-[30%] h-2/3 rounded-3xl flex flex-col justify-around">
+          <ul>
+            <li>Registered User</li>
+            <li>01</li>
+          </ul>
+          <ul>
+            <li>Forum</li>
+            <li>05</li>
+          </ul>
+          <ul>
+            <li>Topics</li>
+            <li>01</li>
+          </ul>
+          <ul>
+            <li>Replies</li>
+            <li>01</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Let's Discuss Section -->
+    <section class="my-10 mx-auto">
+      <!-- discuss content -->
+      <div class="text-center flex flex-col gap-2  items-center my-5">
+        <h1 class="text-3xl font-extrabold">Let’s Discuss</h1>
+        <p class="w-3/5">Yes, you can run unit tests and view the results directly within the app. The integrated
+          testing features allow for a streamlined .</p>
+      </div>
+      <!-- discuss container section-->
+      <div class="flex justify-between">
+        <!-- card container -->
+        <div class="card-container w-3/5">
+
+          <div class="flex gap-3 w-full bg-gray-50 shadow-md p-10 rounded-3xl mb-10">
+            <!-- author icon -->
+            <div class="w-8 h-8 bg-green-600 rounded-xl flex justify-end">
+              <div class="w-2 h-2 bg-red-600 rounded-full"></div>
+            </div>
+            <!-- author content -->
+            <div class="flex flex-col gap-4">
+              <div class="flex gap-6 text-lg font-semibold">
+                <h5>#Music</h5>
+                <h5>Author: <span>Awlad Hossain</span></h5>
+              </div>
+              <div>
+                <h2 class="text-2xl font-extrabold">10 Kids Unaware of Their Halloween Costume</h2>
+              </div>
+              <div>
+                <p class="description font-medium text-gray-500">It’s one thing to subject yourself to ha Halloween
+                  costume mishap because, hey that’s your prerogative</p>
+              </div>
+              <hr class="border border-gray-300 border-dashed">
+              <div class="flex justify-stretch">
+                <div class="flex flex-1 gap-8">
+                  <div class="comment">
+                    <i class="fa-regular fa-message"></i>
+                    <span>560</span>
+                  </div>
+                  <div class="impression">
+                    <i class="fa-regular fa-eye"></i>
+                    <span>14502</span>
+                  </div>
+                  <div class="read-time">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>5 min</span>
+                  </div>
+                </div>
+                <div>
+                  <i class="fa-regular fa-envelope-open"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <!-- mark as read part -->
+        <div class="w-[35%] bg-gray-100 rounded-3xl p-8 shadow-sm">
+          <!-- title -->
+          <div class="flex justify-between mb-8">
+            <h2 class="text-xl font-extrabold">Title</h2>
+            <div class="flex gap-2 items-center">
+              <i class="fa-regular fa-circle-check text-green-400"></i>
+              <p>Mark as read <span class="read-count">0</span></p>
+            </div>
+          </div>
+
+          <!-- readed content -->
+          <div class="bg-white p-4 flex rounded-2xl mb-8 justify-between items-center">
+            <h1 class="text-xl font-extrabold">10 Kids Unaware of Their Halloween Costume</h1>
+            <div class="flex items-center gap-3">
+              <i class="fa-regular fa-eye"></i>
+              <span>1568</span>
+            </div>
+          </div>
+          <div class="bg-white p-4 flex rounded-2xl mb-8 justify-between items-center">
+            <h1 class="text-xl font-extrabold">10 Kids Unaware of Their Halloween Costume</h1>
+            <div class="flex items-center gap-3">
+              <i class="fa-regular fa-eye"></i>
+              <span>1568</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Join our Forum Section -->
+    <section class="flex bg-slate-900 justify-between items-center rounded-3xl p-20">
+      <div class="flex flex-col gap-8 text-white">
+        <h1 class="text-5xl font-black">Join Our Forum</h1>
+        <p class="text-lg text-gray-300 ">Share your favorite opinion and win and wp forum coffee mug! Yes, you can <br>
+          run unit tests and view the results directly within the app. </p>
+        <div>
+          <button class="btn font-bold text-white text-lg border-none rounded-full bg-[#797DFC]">Registered Now</button>
+        </div>
+      </div>
+      <!-- image part -->
+      <div>
+        <img src="images/joinforum.png" alt="joinforum">
+      </div>
+    </section>
+
+    <!-- Latest post section -->
+    <section class="my-14">
+      <!-- post content -->
+      <section class="text-center flex justify-center">
+        <div class="w-1/2 leading-relaxed my-6">
+          <h1 class="text-4xl font-black my-6">Latest Post</h1>
+          <p class="font-normal text-lg text-gray-400">Yes, you can run unit tests and view the results directly within
+            the app. The integrated testing features allow for a streamlined .</p>
+        </div>
+      </section>
+
+      <!-- Latest post card container -->
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+
+        <div class="border p-8 rounded-3xl flex flex-col gap-5 shadow-sm">
+          <div class="post-image rounded-3xl h-[200px] bg-gray-200">
+            <img src="" alt="">
+          </div>
+          <div class="date flex gap-3 items-center font-normal text-gray-500">
+            <i class="fa-regular fa-calendar-minus"></i>
+            <span>06 may 2025</span>
+          </div>
+
+          <div class="title font-extrabold text-xl">
+            <h1>What will a mars habitat force that impact in our daily life!!!</h1>
+          </div>
+
+          <div>
+            <p class="font-normal text-lg ">Yes, you can run unit tests and view the results directly within the app. </p>
+          </div>
+
+          <div class="author flex items-center gap-6">
+            <div class="w-10 h-10 bg-blue-700 rounded-full">
+              <img src="" alt="">
+            </div>
+            <div>
+              <h4 class="font-extrabold text-lg">Author Name</h4>
+              <p class="text-gray-500">Designation</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </section>
 
   </main>
 
   <!-- footer section -->
-  <footer>
+  <footer class="mt-20 p-24 bg bg-gradient-to-t from-[#ffffff] to-[#e6e6e6]">
+    <section class="flex justify-center">
+      <div class="w-1/2 text-center">
+        <div class="footer-content">
+          <h1 class="font-black text-4xl my-6">BrainsTrom</h1>
+          <p class="leading-relaxed font-normal text-gray-500 text-lg">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC</p>
+        </div>
+  
+        <div class="footer-social-media flex gap-5 justify-center my-6 text-xl">
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </section>
 
+    <hr class="border mt-6 mb-10">
+
+    <div class="copyright text-center text-lg font-medium">
+      <p><span>2025</span> &copy;All Rights Reserved. </p>
+    </div>
   </footer>
 
 </body>
