@@ -142,21 +142,26 @@ loadLatestPost()
 
 
 document.getElementById('search-button').addEventListener('click', function () {
+  const postCardContainer = document.getElementById('posts-card-container');
+  const warningText = 'No data found with your query';
   const inputField = document.getElementById('input-field');
   const inputText = inputField.value;
 
-  if (!inputText) return;
+  if (!inputText) return alert('Search something');
 
   const postByQuery = async (inputText) => {
     const response = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${inputText}`);
     const data = await response.json();
     const queryPost = data.posts;
 
+    if(queryPost.length < 1) return postCardContainer.textContent = `${(warningText)}: ${inputText}`
+
     showAllPost(queryPost)
+    console.log(queryPost);
 
   }
 
   postByQuery(inputText)
-
+  console.log(inputText);
 
 })
