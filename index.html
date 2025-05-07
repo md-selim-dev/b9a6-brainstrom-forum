@@ -55,9 +55,9 @@
           </div>
 
           <div class="bg-white p-1 flex rounded-full justify-around gap-2 px-4">
-            <input type="text" placeholder="Search here anything"
+            <input id="input-field" type="text" placeholder="Search here anything"
               class="text-black bg-white font-normal text-[1rem] w-full max-w-xs required outline-none" />
-            <button class="btn bg-[#797DFC] w-28 text-white text-lg rounded-full">Search</button>
+            <button id="search-button" class="btn bg-[#797DFC] w-28 text-white text-lg rounded-full">Search</button>
           </div>
 
         </div>
@@ -93,54 +93,15 @@
       <!-- discuss container section-->
       <div class="flex justify-between">
         <!-- card container -->
-        <div class="card-container w-3/5">
+        <div id="posts-card-container" class="w-3/5">
 
-          <div class="flex gap-3 w-full bg-gray-50 shadow-md p-10 rounded-3xl mb-10">
-            <!-- author icon -->
-            <div class="w-8 h-8 bg-green-600 rounded-xl flex justify-end">
-              <div class="w-2 h-2 bg-red-600 rounded-full"></div>
-            </div>
-            <!-- author content -->
-            <div class="flex flex-col gap-4">
-              <div class="flex gap-6 text-lg font-semibold">
-                <h5>#Music</h5>
-                <h5>Author: <span>Awlad Hossain</span></h5>
-              </div>
-              <div>
-                <h2 class="text-2xl font-extrabold">10 Kids Unaware of Their Halloween Costume</h2>
-              </div>
-              <div>
-                <p class="description font-medium text-gray-500">It’s one thing to subject yourself to ha Halloween
-                  costume mishap because, hey that’s your prerogative</p>
-              </div>
-              <hr class="border border-gray-300 border-dashed">
-              <div class="flex justify-stretch">
-                <div class="flex flex-1 gap-8">
-                  <div class="comment">
-                    <i class="fa-regular fa-message"></i>
-                    <span>560</span>
-                  </div>
-                  <div class="impression">
-                    <i class="fa-regular fa-eye"></i>
-                    <span>14502</span>
-                  </div>
-                  <div class="read-time">
-                    <i class="fa-regular fa-clock"></i>
-                    <span>5 min</span>
-                  </div>
-                </div>
-                <div>
-                  <i class="fa-regular fa-envelope-open"></i>
-                </div>
-              </div>
-            </div>
-          </div>
+          
 
 
         </div>
 
         <!-- mark as read part -->
-        <div class="w-[35%] bg-gray-100 rounded-3xl p-8 shadow-sm">
+        <div class="w-[35%] bg-gray-100 rounded-3xl max-h-fit p-8 shadow-sm">
           <!-- title -->
           <div class="flex justify-between mb-8">
             <h2 class="text-xl font-extrabold">Title</h2>
@@ -198,36 +159,9 @@
       </section>
 
       <!-- Latest post card container -->
-      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+      <section id="latest-post-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
 
-        <div class="border p-8 rounded-3xl flex flex-col gap-5 shadow-sm">
-          <div class="post-image rounded-3xl h-[200px] bg-gray-200">
-            <img src="" alt="">
-          </div>
-          <div class="date flex gap-3 items-center font-normal text-gray-500">
-            <i class="fa-regular fa-calendar-minus"></i>
-            <span>06 may 2025</span>
-          </div>
-
-          <div class="title font-extrabold text-xl">
-            <h1>What will a mars habitat force that impact in our daily life!!!</h1>
-          </div>
-
-          <div>
-            <p class="font-normal text-lg ">Yes, you can run unit tests and view the results directly within the app. </p>
-          </div>
-
-          <div class="author flex items-center gap-6">
-            <div class="w-10 h-10 bg-blue-700 rounded-full">
-              <img src="" alt="">
-            </div>
-            <div>
-              <h4 class="font-extrabold text-lg">Author Name</h4>
-              <p class="text-gray-500">Designation</p>
-            </div>
-          </div>
-
-        </div>
+      
       </section>
     </section>
 
