@@ -1,7 +1,7 @@
 
 
 
-const loadAllPost =async () =>{
+const loadAllPost = async () => {
   const response = await fetch("https://openapi.programming-hero.com/api/retro-forum/posts");
   const data = await response.json();
   const posts = data.posts;
@@ -9,7 +9,7 @@ const loadAllPost =async () =>{
   showAllPost(posts)
 }
 
-const showAllPost = (posts) =>{
+const showAllPost = (posts) => {
   // console.log(posts);
 
   const postCardContainer = document.getElementById('posts-card-container');
@@ -20,9 +20,9 @@ const showAllPost = (posts) =>{
 
     let isActive = null;
 
-    if(post.isActive){
+    if (post.isActive) {
       isActive = "bg-green-600";
-    }else{
+    } else {
       isActive = "bg-red-600"
     };
 
@@ -62,7 +62,7 @@ const showAllPost = (posts) =>{
                   </div>
                 </div>
                 <div class="w-8 h-8 bg-green-500 flex justify-center items-center rounded-full cursor-pointer">
-                  <i class="fa-regular fa-envelope-open"></i>
+                  <i onclick="markAsRead(event)" class="fa-regular fa-envelope-open"></i>
                 </div>
               </div>
             </div>
@@ -72,6 +72,26 @@ const showAllPost = (posts) =>{
 
   });
 };
+
+const markAsRead = (event) => {
+  const title = event.target.parentNode.parentNode.parentNode.childNodes[3].childNodes[1].innerText;
+  const view_count = event.target.parentNode.parentNode.parentNode.lastChild.previousSibling.childNodes[1].childNodes[3].childNodes[3].innerText;
+  console.log(view_count);
+
+  const markReadContainer = document.getElementById('mark-read-container');
+
+  const markReadCard = document.createElement('div')
+  markReadCard.classList = `bg-white p-4 flex rounded-2xl mb-8 justify-between items-center`;
+  markReadCard.innerHTML = `
+         
+           <h1 class="text-xl font-extrabold">${title}</h1>
+           <div class="flex items-center gap-3">
+            <i class="fa-regular fa-eye"></i>
+            <span>${view_count}</span>
+           </div>
+  `;
+  markReadContainer.appendChild(markReadCard);
+}
 
 loadAllPost()
 
@@ -92,7 +112,7 @@ const loadLatestPost = async () => {
           </div>
           <div class="date flex gap-3 items-center font-normal text-gray-500">
             <i class="fa-regular fa-calendar-minus"></i>
-            <span>${latest?.author?.posted_date?latest?.author?.posted_date: "No Publish Date"}</span>
+            <span>${latest?.author?.posted_date ? latest?.author?.posted_date : "No Publish Date"}</span>
           </div>
 
           <div class="title font-extrabold text-xl">
@@ -109,7 +129,7 @@ const loadLatestPost = async () => {
             </div>
             <div>
               <h4 class="font-extrabold text-lg">${latest.author.name}</h4>
-              <p class="text-gray-500">${latest?.author?.designation?latest.author.designation:"Unknown"}</p>
+              <p class="text-gray-500">${latest?.author?.designation ? latest.author.designation : "Unknown"}</p>
             </div>
           </div>
     `;
@@ -121,13 +141,13 @@ const loadLatestPost = async () => {
 loadLatestPost()
 
 
-document.getElementById('search-button').addEventListener('click', function(){
+document.getElementById('search-button').addEventListener('click', function () {
   const inputField = document.getElementById('input-field');
   const inputText = inputField.value;
 
-  if(!inputText) return;
-  
-  const postByQuery = async(inputText) =>{
+  if (!inputText) return;
+
+  const postByQuery = async (inputText) => {
     const response = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${inputText}`);
     const data = await response.json();
     const queryPost = data.posts;
@@ -137,6 +157,6 @@ document.getElementById('search-button').addEventListener('click', function(){
   }
 
   postByQuery(inputText)
-  
+
 
 })
